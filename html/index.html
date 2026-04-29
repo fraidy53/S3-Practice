@@ -4,89 +4,144 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>내가 좋아하는 영화 & 음악</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 	<style>
 		body {
-			font-family: 'Segoe UI', Arial, sans-serif;
-			background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+			font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+			background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+			min-height: 100vh;
 			margin: 0;
 			padding: 0;
 		}
 		.container {
-			max-width: 700px;
+			max-width: 720px;
 			margin: 60px auto;
-			background: #fff;
-			border-radius: 16px;
-			box-shadow: 0 4px 24px rgba(44,62,80,0.08);
-			padding: 40px 32px 32px 32px;
+			background: rgba(255,255,255,0.95);
+			border-radius: 24px;
+			box-shadow: 0 8px 32px rgba(80,80,160,0.13);
+			padding: 48px 36px 36px 36px;
+			position: relative;
+			overflow: hidden;
+		}
+		.container::before {
+			content: '';
+			position: absolute;
+			top: -80px; left: -80px;
+			width: 200px; height: 200px;
+			background: radial-gradient(circle, #fbc2eb55 60%, transparent 100%);
+			z-index: 0;
+		}
+		.container::after {
+			content: '';
+			position: absolute;
+			bottom: -80px; right: -80px;
+			width: 200px; height: 200px;
+			background: radial-gradient(circle, #a18cd155 60%, transparent 100%);
+			z-index: 0;
 		}
 		h1 {
-			color: #4f46e5;
-			margin-bottom: 8px;
+			color: #7b2ff2;
+			margin-bottom: 10px;
+			font-family: 'Montserrat', Arial, sans-serif;
+			font-size: 2.3em;
+			letter-spacing: -1px;
+			z-index: 1;
+			position: relative;
 		}
 		h2 {
-			color: #6366f1;
-			margin-top: 32px;
-			margin-bottom: 12px;
-			font-size: 1.3em;
-		}
-		ul {
-			padding-left: 20px;
-		}
-		li {
-			margin-bottom: 10px;
+			color: #f953c6;
+			margin-top: 38px;
+			margin-bottom: 16px;
+			font-size: 1.25em;
+			font-family: 'Montserrat', Arial, sans-serif;
+			z-index: 1;
+			position: relative;
 		}
 		.card {
-			background: #f3f4f6;
-			border-radius: 8px;
-			padding: 18px 20px;
-			margin-bottom: 16px;
-			box-shadow: 0 2px 8px rgba(99,102,241,0.06);
+			background: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);
+			border-radius: 14px;
+			padding: 22px 26px 18px 26px;
+			margin-bottom: 22px;
+			box-shadow: 0 4px 16px rgba(123,47,242,0.07);
+			transition: transform 0.18s, box-shadow 0.18s;
+			position: relative;
+			z-index: 1;
+		}
+		.card:hover {
+			transform: translateY(-6px) scale(1.03);
+			box-shadow: 0 12px 32px rgba(123,47,242,0.13);
+		}
+		.icon {
+			font-size: 2.1em;
+			margin-bottom: 8px;
+			display: inline-block;
 		}
 		.title {
 			font-weight: bold;
 			color: #22223b;
+			font-size: 1.13em;
+			margin-bottom: 2px;
 		}
 		.desc {
 			color: #555;
 			margin-top: 4px;
+			margin-bottom: 8px;
 		}
 		.link {
-			color: #4f46e5;
+			color: #7b2ff2;
 			text-decoration: none;
 			font-size: 0.97em;
+			font-weight: 500;
+			transition: color 0.15s;
 		}
 		.link:hover {
+			color: #f953c6;
 			text-decoration: underline;
 		}
-		@media (max-width: 600px) {
-			.container { padding: 18px 6px; }
+		.divider {
+			height: 2px;
+			background: linear-gradient(90deg, #a18cd1 0%, #fbc2eb 100%);
+			border: none;
+			margin: 36px 0 24px 0;
+			opacity: 0.5;
+		}
+		@media (max-width: 700px) {
+			.container { padding: 18px 4vw; }
 		}
 	</style>
 </head>
 <body>
 	<div class="container">
 		<h1>내가 좋아하는 영화 & 음악</h1>
-		<p style="color:#444; margin-bottom:28px;">취향을 공유합니다! 아래는 제가 좋아하는 영화와 음악 추천 리스트입니다.</p>
+		<p style="color:#444; margin-bottom:28px; font-size:1.08em; z-index:1; position:relative;">취향을 공유합니다! 아래는 제가 좋아하는 영화와 음악 추천 리스트입니다.</p>
 
 		<h2>🎬 영화 추천</h2>
 		<div class="card">
+			<span class="icon">🍿</span>
 			<div class="title">인셉션 (Inception)</div>
 			<div class="desc">크리스토퍼 놀란 감독의 SF 스릴러. 꿈과 현실이 교차하는 독특한 스토리와 압도적인 영상미!</div>
 			<a class="link" href="https://movie.naver.com/movie/bi/mi/basic.naver?code=73362" target="_blank">네이버 영화 정보</a>
 		</div>
 		<div class="card">
+			<span class="icon">🌇</span>
 			<div class="title">라라랜드 (La La Land)</div>
 			<div class="desc">아름다운 음악과 영상, 사랑과 꿈에 대한 이야기. OST도 정말 좋아요!</div>
 			<a class="link" href="https://movie.naver.com/movie/bi/mi/basic.naver?code=132623" target="_blank">네이버 영화 정보</a>
 		</div>
 
+		<hr class="divider">
+
 		<h2>🎵 음악 추천</h2>
 		<div class="card">
+			<span class="icon">🎸</span>
 			<div class="title">Coldplay - Viva La Vida</div>
 			<div class="desc">밝고 희망찬 멜로디, 누구나 한 번쯤 들어봤을 명곡!</div>
 			<a class="link" href="https://www.youtube.com/watch?v=dvgZkm1xWPE" target="_blank">유튜브로 듣기</a>
 		</div>
 		<div class="card">
+			<span class="icon">🌙</span>
 			<div class="title">아이유 (IU) - 밤편지</div>
 			<div class="desc">잔잔하고 감성적인 멜로디, 가사가 정말 예쁜 곡입니다.</div>
 			<a class="link" href="https://www.youtube.com/watch?v=BzYnNdJhZQw" target="_blank">유튜브로 듣기</a>
