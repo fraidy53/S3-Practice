@@ -3,21 +3,94 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>샘플 페이지</title>
+	<title>내가 좋아하는 영화 & 음악</title>
 	<style>
-		body { font-family: Arial, sans-serif; background: #f5f5f5; margin: 0; padding: 0; }
-		.container { max-width: 600px; margin: 60px auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 32px; }
-		h1 { color: #2d8cf0; }
-		p { color: #333; }
-		.btn { display: inline-block; margin-top: 20px; padding: 10px 24px; background: #2d8cf0; color: #fff; border: none; border-radius: 4px; text-decoration: none; font-size: 16px; }
-		.btn:hover { background: #1a6fb3; }
+		body {
+			font-family: 'Segoe UI', Arial, sans-serif;
+			background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			max-width: 700px;
+			margin: 60px auto;
+			background: #fff;
+			border-radius: 16px;
+			box-shadow: 0 4px 24px rgba(44,62,80,0.08);
+			padding: 40px 32px 32px 32px;
+		}
+		h1 {
+			color: #4f46e5;
+			margin-bottom: 8px;
+		}
+		h2 {
+			color: #6366f1;
+			margin-top: 32px;
+			margin-bottom: 12px;
+			font-size: 1.3em;
+		}
+		ul {
+			padding-left: 20px;
+		}
+		li {
+			margin-bottom: 10px;
+		}
+		.card {
+			background: #f3f4f6;
+			border-radius: 8px;
+			padding: 18px 20px;
+			margin-bottom: 16px;
+			box-shadow: 0 2px 8px rgba(99,102,241,0.06);
+		}
+		.title {
+			font-weight: bold;
+			color: #22223b;
+		}
+		.desc {
+			color: #555;
+			margin-top: 4px;
+		}
+		.link {
+			color: #4f46e5;
+			text-decoration: none;
+			font-size: 0.97em;
+		}
+		.link:hover {
+			text-decoration: underline;
+		}
+		@media (max-width: 600px) {
+			.container { padding: 18px 6px; }
+		}
 	</style>
 </head>
 <body>
 	<div class="container">
-		<h1>안녕하세요!</h1>
-		<p>이것은 샘플 HTML 페이지입니다.<br>아무거나 요청하셔서 만들어드렸어요 😊</p>
-		<a href="https://www.naver.com" class="btn" target="_blank">네이버로 이동</a>
+		<h1>내가 좋아하는 영화 & 음악</h1>
+		<p style="color:#444; margin-bottom:28px;">취향을 공유합니다! 아래는 제가 좋아하는 영화와 음악 추천 리스트입니다.</p>
+
+		<h2>🎬 영화 추천</h2>
+		<div class="card">
+			<div class="title">인셉션 (Inception)</div>
+			<div class="desc">크리스토퍼 놀란 감독의 SF 스릴러. 꿈과 현실이 교차하는 독특한 스토리와 압도적인 영상미!</div>
+			<a class="link" href="https://movie.naver.com/movie/bi/mi/basic.naver?code=73362" target="_blank">네이버 영화 정보</a>
+		</div>
+		<div class="card">
+			<div class="title">라라랜드 (La La Land)</div>
+			<div class="desc">아름다운 음악과 영상, 사랑과 꿈에 대한 이야기. OST도 정말 좋아요!</div>
+			<a class="link" href="https://movie.naver.com/movie/bi/mi/basic.naver?code=132623" target="_blank">네이버 영화 정보</a>
+		</div>
+
+		<h2>🎵 음악 추천</h2>
+		<div class="card">
+			<div class="title">Coldplay - Viva La Vida</div>
+			<div class="desc">밝고 희망찬 멜로디, 누구나 한 번쯤 들어봤을 명곡!</div>
+			<a class="link" href="https://www.youtube.com/watch?v=dvgZkm1xWPE" target="_blank">유튜브로 듣기</a>
+		</div>
+		<div class="card">
+			<div class="title">아이유 (IU) - 밤편지</div>
+			<div class="desc">잔잔하고 감성적인 멜로디, 가사가 정말 예쁜 곡입니다.</div>
+			<a class="link" href="https://www.youtube.com/watch?v=BzYnNdJhZQw" target="_blank">유튜브로 듣기</a>
+		</div>
 	</div>
 </body>
 </html>
